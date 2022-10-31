@@ -1,0 +1,31 @@
+#!/bin/bash
+
+hour_ofday=`date +%H`
+
+echo -e "The hour of the day is $hour_ofday"
+
+if [ $hour_ofday -ge 18 -a $hour_ofday -le 23 ]
+then
+        echo "You should have a cup of milk and some oats, or you can have a cup of hot choclate and a granola bar"
+        echo "The most productive people work during the early hours of the morning"
+
+elif [ $hour_ofday -ge 15 -a $hour_ofday -le 18 ]
+then
+        echo "You should have a bowl of cereal and some water, or you can have a cup of tea and bread"
+        echo "Today is a good day"
+
+elif [ $hour_ofday -ge 10 -a $hour_ofday -le 15 ]
+then
+        echo "You should have a doughnut and a cup of coffee if you must, or a cup of noodles"
+        echo "Take a break to refocus if you must, the sharpest minds do work in batches"
+
+elif [ $hour_ofday -ge 6 -a $hour_ofday -le 10 ]
+then
+        echo "You should have a plate of rice and sauce, or a serving of spaghetti and stew"
+        echo "Today was indeed a good day"
+
+else
+        echo "You should have some snacks"
+        echo "Deep thoughts about today and how it could have been even better"
+
+fi
